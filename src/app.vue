@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app"> 
     <header class="app-header" style="display:none;" v-show="appload">
         <div class="_effect" :class="{'_effect--50':decline}">
             <index-header style="overflow:visible;"></index-header>
