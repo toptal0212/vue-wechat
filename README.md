@@ -1,16 +1,16 @@
 # vue-wechat
-  用vue.js开发微信app
+  Developing a WeChat app using vue.js.
 
-#### 主要初衷还是自己可以通过个人项目实践新技术，在业务中发现问题，积累经验。并且可以与各位交流发现不足。
+#### The main intention is to practice new technologies through personal projects, discover issues in business, accumulate experience, and exchange ideas with others.
 
-  线上地址:  [vue-wechat.github.io](https://vue-wechat.github.io)
+  Online address: [vue-wechat.github.io](https://vue-wechat.github.io)
 
-  项目地址:  [useryangtao/vue-wechat](https://github.com/useryangtao/vue-wechat)
+  Project address: [useryangtao/vue-wechat](https://github.com/useryangtao/vue-wechat)
 
-  github.io 加载略慢, 建议clone本地调试预览。
+  github.io loads a bit slow, it is recommended to clone and debug locally.
 
 
-### 安装
+### Installation
 
 ``` bash
 # install dependencies
@@ -23,10 +23,10 @@ npm run dev
 npm run build
 
 ```
-### 技术栈
-  vue-wechat是主要在利用Vue.js * 实现了微信app及很多细节。
+### Technology Stack
+  vue-wechat mainly utilizes Vue.js to implement the WeChat app and many details.
 
-  此demo在实现上使用了以下技术
+  This demo uses the following technologies for implementation:
   
   - vue
   - vuex
@@ -38,87 +38,86 @@ npm run build
   - zepto
   - fastclick
 
-#### 一些亮点
+#### Some Highlights
 
-  新页面跳转的过渡动画 参照ios系统的页面切换风格,是通过router-view及transition特性结合实现的。
-  
-  消息列表页的item 左划操作处理,使用vuex(getters,actions)实现实时处理计算数据
-  
-  (语音/文字)对话框 组件间 动画切换，还有通过事件注册tap 实现 按住说话效果；
+  Transition animations for new page navigation mimic the page switching style of the iOS system, achieved through combining router-view and transition features.
 
-  还有一些交互行为细节及动画：
-   - 如css3动画实现的扫一扫;
-   - 删除消息列表item，通过vue-animated-list 实现动画移除;
-   - 消息页右上角+的显出无动画，隐藏有动画；
+  Handling left swipe action on message list items using vuex (getters, actions) for real-time data processing.
+
+  Animation transitions between (voice/text) dialogue box components, along with tap event registration for holding to speak effect.
+
+  Additional interaction details and animations:
+   - CSS3 animation for scan feature;
+   - Message list item deletion with animation using vue-animated-list;
+   - Animation for displaying/hiding the "+" button in the message page;
   
-  朋友圈下拉拖拽显示完整封面
+  Dragging down to show complete cover in the friend circle section.
   
-  listview部分也使用了weui的结构。 
+  The listview section also utilizes the structure of weui.
   
-  小图标全部使用iconfont方式,减少图片请求。
+  All small icons are implemented using iconfont to reduce image requests.
   
 
-###手机预览(QR)
+### Mobile Preview (QR)
 
   ![](./src/assets/images/readme/qr-vue-wechat.png)
   
-  如微信扫码浏览空白，请 点击右上角-> 浏览器 打开
-  首次加载都很慢,请耐心等待。
+  If the QR code appears blank when scanned with WeChat, please click the upper right corner -> Open in Browser. 
+  Initial loading may be slow, please be patient.
 
 
+### Basic Operations
 
-### 基本操作
-
-  主页
+  Home Page
 
   ![](./src/assets/images/readme/view-chat-contact.png)![](./src/assets/images/readme/view-chat.png)
 
-  页面切换,动画过渡
-  (仿照ios系统切换风格:下一页打开时,当前页左偏移-30%;当前页关闭时,上一页左偏移从-30%过渡到0%)
+  Page switching with animation transition
+  (Mimicking iOS system switch style: when opening the next page, the current page shifts left by -30%; when closing the current page, the previous page shifts left from -30% to 0%)
 
   ![](./src/assets/images/readme/view-wechat-animation.gif)
 
-  消息列表 (未读/已读)操作 及 删除
+  Message list (unread/read) operations and deletion
 
   ![](./src/assets/images/readme/view-wechat-chat.gif)
 
-  按下说话,松开结束 效果
+  Press and hold to speak, release to end effect
 
   ![](./src/assets/images/readme/tap-say.png)
 
-  发现-朋友圈
+  Discovery - Moments
 
   ![](./src/assets/images/readme/view-wechat-find-albums-friends.gif)
 
-  发现-扫一扫
+  Discovery - Scan
 
   ![](./src/assets/images/readme/view-wechat-find-sao-yi-sao.gif)
 
-  图标-iconfont
+  Iconfont Icons
 
-#### 为了减少图片加载,图标使用的iconfont
+#### To reduce image loading, icons are implemented using iconfont
 
   ![](./src/assets/images/readme/font.png)
 
-### 添加到主屏幕
+### Add to Home Screen
 
   ![](./src/assets/images/readme/add-to-screen.png)
 
 
 
-### 开发约定
+### Development Conventions
   ``` bash
-  所有组件.vue名 都统一 《短横线》 命名
-  css内下划线( _ )开始的为通用类
-  js中内下划线( _ )开头的为私有属性
-  所有events均使用短横线 命名
-  所有组件(.vue)里template标签包含的元素必须是component-xx 开头
-  所有state统一下划线 命名
-  所有 action统一下划线命名
+  All .vue component names are uniformly named with hyphens.
+  Classes starting with an underscore (_) in CSS are common classes.
+  Properties starting with an underscore (_) in JavaScript are private.
+  All events are named with hyphens.
+  Elements contained within the template tag of all components (.vue) must start with component-xx.
+  All states are uniformly named with underscores.
+  All actions are uniformly named with underscores.
   ```
 
 
-### 参考
+### References
 
   [Vue-cnodejs](https://github.com/shinygang/Vue-cnodejs)
 
@@ -128,16 +127,15 @@ npm run build
 
   [vue-shopping](https://github.com/andylei18/vue-shopping)
 
-### 关于作者
+### About the Author
 
-微博:[Water杨涛](http://weibo.com/u/3503321141)
+Weibo: [Water杨涛](http://weibo.com/u/3503321141)
 
 ```
 // TODO
 
-####《用vue2开发微信app界面》
+####《Developing WeChat App Interface with Vue2》
 
-开发完善的功能，如实现注册账号，加好友，实现聊天功能，等。
+Complete development of features such as account registration, adding friends, implementing chat functionality, etc.
 
 ```
-  
